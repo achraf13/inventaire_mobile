@@ -1,0 +1,271 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{76CD14CB-00F3-4215-953F-9138241F20D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>inventaire_mobile</RootNamespace>
+    <AssemblyName>inventaire_mobile</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>3C41C503-53EF-4c2a-8DD4-A8217CAD115E</PlatformID>
+    <OSVersion>4.20</OSVersion>
+    <DeployDirSuffix>inventaire_mobile</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Pocket PC 2003</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="Symbol - Copie, Version=1.6.1.4, Culture=neutral, PublicKeyToken=68ec8db391f150ca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\achraf bureau\Inventory\Inventory\bin\Debug\Symbol - Copie.dll</HintPath>
+    </Reference>
+    <Reference Include="Symbol, Version=1.6.1.4, Culture=neutral, PublicKeyToken=68ec8db391f150ca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\achraf bureau\Inventory\Inventory\bin\Debug\Symbol.dll</HintPath>
+    </Reference>
+    <Reference Include="Symbol.Barcode - Copie, Version=1.6.1.18, Culture=neutral, PublicKeyToken=68ec8db391f150ca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\achraf bureau\Inventory\Inventory\bin\Debug\Symbol.Barcode - Copie.dll</HintPath>
+    </Reference>
+    <Reference Include="Symbol.Barcode, Version=1.6.1.18, Culture=neutral, PublicKeyToken=68ec8db391f150ca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\achraf bureau\Inventory\Inventory\bin\Debug\Symbol.Barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="Symbol.ResourceCoordination - Copie, Version=1.6.1.10, Culture=neutral, PublicKeyToken=68ec8db391f150ca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\achraf bureau\Inventory\Inventory\bin\Debug\Symbol.ResourceCoordination - Copie.dll</HintPath>
+    </Reference>
+    <Reference Include="Symbol.ResourceCoordination, Version=1.6.1.10, Culture=neutral, PublicKeyToken=68ec8db391f150ca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\achraf bureau\Inventory\Inventory\bin\Debug\Symbol.ResourceCoordination.dll</HintPath>
+    </Reference>
+    <Reference Include="Symbol.StandardForms - Copie, Version=1.6.1.5, Culture=neutral, PublicKeyToken=68ec8db391f150ca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\achraf bureau\Inventory\Inventory\bin\Debug\Symbol.StandardForms - Copie.dll</HintPath>
+    </Reference>
+    <Reference Include="Symbol.StandardForms, Version=1.6.1.5, Culture=neutral, PublicKeyToken=68ec8db391f150ca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\achraf bureau\Inventory\Inventory\bin\Debug\Symbol.StandardForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acceuil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acceuil.Designer.cs">
+      <DependentUpon>Acceuil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="API.cs" />
+    <Compile Include="Categorie\ajouterCategorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorie\ajouterCategorie.Designer.cs">
+      <DependentUpon>ajouterCategorie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorie\categorie_requete.cs" />
+    <Compile Include="Categorie\categorie_traitement.cs" />
+    <Compile Include="Categorie\gestionCategorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorie\gestionCategorie.Designer.cs">
+      <DependentUpon>gestionCategorie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorie\modifierCategorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorie\modifierCategorie.Designer.cs">
+      <DependentUpon>modifierCategorie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Categorie\supprimerCategorie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Categorie\supprimerCategorie.Designer.cs">
+      <DependentUpon>supprimerCategorie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="connexion.cs" />
+    <Compile Include="Etat\ajouterEtat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etat\ajouterEtat.Designer.cs">
+      <DependentUpon>ajouterEtat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etat\Etat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etat\Etat.Designer.cs">
+      <DependentUpon>Etat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etat\etat_requete.cs" />
+    <Compile Include="Etat\etat_traitement.cs" />
+    <Compile Include="Etat\modifierEtat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etat\modifierEtat.Designer.cs">
+      <DependentUpon>modifierEtat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etat\supprimerEtat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Etat\supprimerEtat.Designer.cs">
+      <DependentUpon>supprimerEtat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventaire\Inventaire.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventaire\Inventaire.Designer.cs">
+      <DependentUpon>Inventaire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventaire\inventaire_requete.cs" />
+    <Compile Include="Inventaire\inventaire_traitement.cs" />
+    <Compile Include="Localisation\Bien\bien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Localisation\Bien\bien.Designer.cs">
+      <DependentUpon>bien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Localisation\Bien\bien_requete.cs" />
+    <Compile Include="Localisation\Bien\bien_traitement.cs" />
+    <Compile Include="Localisation\Emplacement\emplacement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Localisation\Emplacement\emplacement.Designer.cs">
+      <DependentUpon>emplacement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Localisation\Emplacement\emplacement_requete.cs" />
+    <Compile Include="Localisation\Emplacement\emplacement_traitement.cs" />
+    <Compile Include="Localisation\Site\site.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Localisation\Site\site.Designer.cs">
+      <DependentUpon>site.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Localisation\Site\site_requete.cs" />
+    <Compile Include="Localisation\Site\site_traitement.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Acceuil.resx">
+      <DependentUpon>Acceuil.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorie\ajouterCategorie.resx">
+      <DependentUpon>ajouterCategorie.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Categorie\supprimerCategorie.resx">
+      <DependentUpon>supprimerCategorie.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etat\ajouterEtat.resx">
+      <DependentUpon>ajouterEtat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etat\Etat.resx">
+      <DependentUpon>Etat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etat\modifierEtat.resx">
+      <DependentUpon>modifierEtat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Etat\supprimerEtat.resx">
+      <DependentUpon>supprimerEtat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventaire\Inventaire.resx">
+      <DependentUpon>Inventaire.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localisation\Bien\bien.resx">
+      <DependentUpon>bien.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localisation\Emplacement\emplacement.resx">
+      <DependentUpon>emplacement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localisation\Site\site.resx">
+      <DependentUpon>site.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Requete.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bdd_inventaire_mobile.sdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
